@@ -19,7 +19,6 @@ class WorkoutSession extends Model
         'user_id',
         'start_at',
         'end_at',
-        'workout_id',
     ];
 
     /**
@@ -28,14 +27,6 @@ class WorkoutSession extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function workout()
-    {
-        return $this->belongsTo(Workout::class);
     }
 
     /**

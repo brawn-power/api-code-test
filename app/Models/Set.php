@@ -16,7 +16,7 @@ class Set extends Model
      * @var string[]
      */
     protected $fillable = [
-        'workout_id',
+        'workout_session_id',
         'reps',
         'weight',
         'lift_id',

@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('workout_sessions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('workout_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->dateTime('start_time');
             $table->dateTime('end_time');
