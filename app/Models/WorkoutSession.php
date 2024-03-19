@@ -36,4 +36,12 @@ class WorkoutSession extends Model
     {
         return $this->hasMany(Set::class);
     }
+
+    protected function volume(): Attribute
+    {
+        // sum all of each sets volume which is also an attribute on the sets
+        return Attribute::make(
+            set: fn (string $value) => $this->weight * $this->reps,
+        );
+    }      
 }

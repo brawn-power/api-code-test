@@ -38,4 +38,11 @@ class Set extends Model
     {
         return $this->belongsTo(WorkoutSession::class);
     }
+
+    protected function volume(): Attribute
+    {
+        return Attribute::make(
+            set: fn (string $value) => $this->reps * $this->weight,
+        );
+    }    
 }
