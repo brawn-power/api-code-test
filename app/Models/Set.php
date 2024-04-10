@@ -24,6 +24,19 @@ class Set extends Model
     ];
 
     /**
+     * Appends
+     * @var array
+     */
+    protected $appends = [
+        'volume',
+    ];
+
+    public function getVolumeAttribute()
+    {
+        return $this->reps * $this->weight;
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function lift()
