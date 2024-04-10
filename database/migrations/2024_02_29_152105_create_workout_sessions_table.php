@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('workout_sessions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->dateTime('start_time');
-            $table->dateTime('end_time');
+            $table->dateTime('start_at');
+            $table->dateTime('end_at');
             $table->timestamps();
         });
     }

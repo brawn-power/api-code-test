@@ -25,7 +25,7 @@ Users would like to be able to track their workout progress over time. We need t
 
 ## Additional Data
 
-The paginated response should include the volume by workout session. Additionally, the following stats are also required.
+The following stats are also required. They should consider the filters passed into the request as well.
 - Max volume (reps x weight) for a single session across all time.
 - Max weight lifted across all time.
 
@@ -35,7 +35,7 @@ The paginated response should include the volume by workout session. Additionall
 
 ## Error Handling
 
-- Utilizes Laravel's error handling for graceful error messages.
+- Utilises Laravel's error handling for graceful error messages.
 - Authentication issues are handled by the Laravel framework.
 
 ## Parameter Validation
@@ -48,6 +48,6 @@ Feel free to explore the code for a better understanding of the data structure.
 ## Brief ##
 Create the required endpoint and classes to create a solution to the problem listed above. Please take a fork of this repo and submit a pull request with your solution. Please include a brief explanation of your solution and any assumptions you made in your pull request.
 
-This task should take no longer than 2 hours. If there is anything you run out of time to complete please list on the PR what you would have done if you had more time.
+You should spend no longer than 1-2 hours on this solution. Please list on the PR what you would have done if you had more time.
 
 If you have any questions, or anything is unclear please reach out for additional support.
