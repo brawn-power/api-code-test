@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::group(['middleware' => 'auth:sanctum'], function () {
+Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
@@ -24,4 +24,4 @@ use Illuminate\Support\Facades\Route;
         Route::get('/', [WorkoutSessionController::class, 'index']);
         Route::post('/', [WorkoutSessionController::class, 'store']);
     });
-// });
+});
