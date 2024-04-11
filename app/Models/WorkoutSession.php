@@ -22,6 +22,25 @@ class WorkoutSession extends Model
     ];
 
     /**
+     * Appends
+     * @var array
+     */
+    protected $appends = [
+        'volume',
+        'max_weight',
+    ];
+
+    public function getVolumeAttribute()
+    {
+        return $this->sets->sum('volume');
+    }
+
+    public function getMaxWeightAttribute()
+    {
+        return $this->sets->max('weight');
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
