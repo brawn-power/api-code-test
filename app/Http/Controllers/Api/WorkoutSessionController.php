@@ -24,7 +24,10 @@ class WorkoutSessionController extends Controller
             ->orderBy('start_at', 'desc')
             ->paginate();
 
-        return response()->json($workoutSessions);
+        return response()->json([
+            'max_weight' => $request->user()->sets()->max('weight'),
+            'workout_sessions' => $workoutSessions,
+        ]);
     }
 
     public function store(CreateWorkoutSession $request)
