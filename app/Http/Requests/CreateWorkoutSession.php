@@ -22,7 +22,7 @@ class CreateWorkoutSession extends FormRequest
     public function rules(): array
     {
         return [
-            'workout_id'     => 'required|exists:workouts,id',
+            // 'workout_session_id'     => 'required|exists:workout_sessions,id',
             'start_at'       => 'required|date|before:end_at',
             'end_at'         => 'required|date|after:start_at',
             'sets'           => 'required|array',
