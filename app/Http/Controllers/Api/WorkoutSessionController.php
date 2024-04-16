@@ -38,7 +38,7 @@ class WorkoutSessionController extends Controller
             $workoutSession->sets()->createMany($request->sets);
 
             DB::commit();
-            return ApiResponse::success($workoutSession, 'Workout session created successfully', 201);
+            return ApiResponse::success($workoutSession, 'Workout session created successfully', 200);
         } catch (\Exception $e) {
             DB::rollBack();
             return ApiResponse::error($e->getMessage(), 500);
@@ -71,7 +71,7 @@ class WorkoutSessionController extends Controller
             $workoutSession->sets()->createMany($request->sets);
 
             DB::commit();
-            return ApiResponse::success($workoutSession, 'Workout session updated successfully', 201);
+            return ApiResponse::success($workoutSession, 'Workout session updated successfully', 200);
         } catch (\Exception $e) {
             DB::rollBack();
             return ApiResponse::error($e->getMessage(), 500);

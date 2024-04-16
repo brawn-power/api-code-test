@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LiftRequest;
 use App\Models\Lift;
-use Illuminate\Http\Request;
 use App\Helpers\ApiResponse;
 
 class LiftController extends Controller
@@ -29,7 +28,7 @@ class LiftController extends Controller
             $lift = new Lift();
             $lift->name = $request->name;
             $lift->save();
-            return ApiResponse::success($lift, 'Lift created successfully', 201);
+            return ApiResponse::success($lift, 'Lift created successfully', 200);
         } catch (\Exception $e) {
             return ApiResponse::error($e->getMessage(), 500);
         }
@@ -52,7 +51,7 @@ class LiftController extends Controller
             $lift = Lift::findOrFail($id);
             $lift->name = $request->name;
             $lift->save();
-            return ApiResponse::success($lift, 'Lift update successfully', 201);
+            return ApiResponse::success($lift, 'Lift update successfully', 200);
         } catch (\Exception $e) {
             return ApiResponse::error($e->getMessage(), 500);
         }
