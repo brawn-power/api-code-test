@@ -17,7 +17,7 @@ class ApiTest extends TestCase
         $response = $this->post(
             '/api/auth/login',
             [
-                'email' => 'duongdinhcuongviajsc@gmail.com',
+                'email' => 'your-email@gmail.com',
                 'password' => '123123123'
             ]
         );
@@ -30,7 +30,7 @@ class ApiTest extends TestCase
             ])->assertJson([
                 'data' => [
                     'user' => [
-                        'email' => 'duongdinhcuongviajsc@gmail.com',
+                        'email' => 'your-email@gmail.com',
                     ],
                 ],
             ]);
@@ -44,7 +44,7 @@ class ApiTest extends TestCase
         $response = $this->post(
             '/api/auth/login',
             [
-                'email' => 'duongdinhcuongviajsc2@gmail.com',
+                'email' => 'your-email@gmail.com',
                 'password' => '123123123'
             ]
         );

@@ -389,7 +389,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Duong Cuong', 'duongdinhcuongviajsc@gmail.com', NULL, '$2y$12$eNW4gtA17BtAK/NoFqib8ONgFMy3uI1O5KN42gsZ8UStDt/Jc2Np2', NULL, '2024-04-11 19:16:04', '2024-04-11 19:16:04');
+(1, 'Duong Cuong', 'your-email@gmail.com', NULL, '$2y$12$eNW4gtA17BtAK/NoFqib8ONgFMy3uI1O5KN42gsZ8UStDt/Jc2Np2', NULL, '2024-04-11 19:16:04', '2024-04-11 19:16:04');
 
 -- --------------------------------------------------------
 
