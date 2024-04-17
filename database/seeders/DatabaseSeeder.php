@@ -17,19 +17,19 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $lifts = Lift::factory(5)->create();
-        WorkoutSession::factory(5)
-                      ->has(Set::factory()
-                               ->count(15)
-                               ->sequence(fn(Sequence $sequence) => [
-                                   'order'   => $sequence->index,
-                                   'lift_id' => match (true) {
-                                       $sequence->index < 3 => $lifts[0]->id,
-                                       $sequence->index < 6 => $lifts[1]->id,
-                                       $sequence->index < 9 => $lifts[2]->id,
-                                       $sequence->index < 12 => $lifts[3]->id,
-                                       $sequence->index < 15 => $lifts[4]->id,
-                                   }
-                               ]))
-                      ->create();
+        WorkoutSession::factory(20)
+            ->has(Set::factory()
+                ->count(20)
+                ->sequence(fn(Sequence $sequence) => [
+                    'order'   => $sequence->index,
+                    'lift_id' => match (true) {
+                        $sequence->index % 15 < 3 => $lifts[0]->id,
+                        $sequence->index % 15 < 6 => $lifts[1]->id,
+                        $sequence->index % 15 < 9 => $lifts[2]->id,
+                        $sequence->index % 15 < 12 => $lifts[3]->id,
+                        $sequence->index % 15 < 15 => $lifts[4]->id,
+                    }
+                ]))
+            ->create();
     }
 }
