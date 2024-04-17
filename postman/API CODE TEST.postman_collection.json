@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "8428f672-5a4a-40c1-84be-b24134c06687",
+		"name": "API CODE TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28202762"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"your-email@gmail.com\",\r\n    \"password\": \"123123123\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL_API}}/api/auth/login",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logged",
+			"item": [
+				{
+					"name": "Lifts",
+					"item": [
+						{
+							"name": "list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/lifts/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"lifts",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Jogging\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/lifts/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"lifts",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Jogging\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/lifts/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"lifts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/lifts/4",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"lifts",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "WorkoutSessions",
+					"item": [
+						{
+							"name": "list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/workout-sessions/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"workout-sessions",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Jogging\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/workout-sessions/",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"workout-sessions",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Jogging\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/workout-sessions/1",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"workout-sessions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL_API}}/api/workout-sessions/4",
+									"host": [
+										"{{URL_API}}"
+									],
+									"path": [
+										"api",
+										"workout-sessions",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRmNzdjMGUwOWFlYjAxNjQzMGM2NGYxMTg3MWE1NTIyZDM0YjlkOWI4NTE0MWQ5ZDYyMTAzZmRhNmQ3YjY1OWNiNjk3MjFlYWExYWQxMDEiLCJpYXQiOjE3MDQ2ODc2OTEuNDcyNTM3LCJuYmYiOjE3MDQ2ODc2OTEuNDcyNTQxLCJleHAiOjE3MzYzMTAwOTEuNDY4NDcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.KW-gTmGWiNgC8PPCW_7a5ecldX08Kj6dbZjET8bWRUBaxpVIOQw6QDWXLZO7xFmJwMCx-kAomW7qvFtoos3iIdAafCCupYuZDrMBNc6EeSwDtczvH0uC1WNp_ul_mDruKMxsoJfLU7d5r11PMbIWfIHngERPBx0UjCC4JkpevnKPDSbmGvLeePT3kw1QRvxlrQP2vBBAtwnqfMIMGma3I3n453abDdacuCRv4RNQVPZ6X17Dmed0WtdtZUCSfv50C-_u3eqRhQFl_o7149G6doMuuVLlRlmj_fqsuUKWdy0-DBGI5aeJ8UTifUzdoIdvAqEzEvZouGqvUlpOUxRKQeLcX11P_bDWn7YL9ItR2nfMf7QOqRxO2PJi-Fx6L8_Es79v0M0MLPp2Sf6tzZBaJOtDkLPWjUhXADhx44BNf4KN5TFp2xSjnldnF8E76Qy4Mlf386GnYo1D1awo8O2qp2rTipIx0ZkjzporAUmtIlyVlysdQJbY3gs_1VLCLYhHWF0_jwmwvZMVCM5IjAc5lzeFpLn3bYvmHNxJ78105sydTDdFqf53t2EttapNj2LvrrRkROrv7abPSwBDqji-8v3LVmdZjjlyTY_wBoqtNewjYOplAIw_Lfs3Xy2iHmxt5mwBpyAwPIDJNWxrkN_3ISgBsCBxs1Q_7X-hyBYJKIM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API}}/api/auth/logout",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWIzMGMyOGI4ZGU1ZTllYzkyZWZlM2M3YTk0ZWJhMDZhNzRmNzlkOTcyNjk5ZmIyOTQzNGU1MjIwNGRmMGE0ZmEyMGZkZTY2NGJiMzNhMTEiLCJpYXQiOjE3MTI4ODk1NTguMTEwNTg5LCJuYmYiOjE3MTI4ODk1NTguMTEwNTkxLCJleHAiOjE3NDQ0MjU1NTguMTA2NTcxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XYVW-bZ_5wDbZEan5Ux78O0nV8UEPpmlMOdpevY6r1sMoug9Z8jbIS1I8nCSB5a3EHfffzCTcMh78ovw6N7qmFboLDn2mj_NW6K9Exo79tRGUydFxaN1rIhgWdzNkzHuFbVFxbxVEkiRHBGz3wRL_q8BVnfi4-a2psBOMYy12Bp5TLTs5M1c6noVjmQpDzjTkDqoFXQhgYN9VV9Dh7OVqsitqmmVHzWMhdCA6AkmPLXAdtbKcIuB6Xkhq0mCFSMyH8ssKTXufhCuggmfxon62caX9Pspok8KEQCr3lC3qagUADbFmaIAk-QIlCZSvP8zKhxuyX7iCP5dXcyL8eHdtJSFUlGrl6u43M4yx8nbpkvnPznN0Crq-XHsQedHYd_3la0U-MeawsxPF4PT0I7KKOyvNQBafXTyKm1BQ9Sw53Un4NdlkQ0BAm8-FpJVqwKZahSgxeIiDzn2a2dJmJOaNjZ4LjPjFJtEmklosJDLfzFVbKI5HDDz_wA4FAJ5x3KN4yvwiM6DXSNkpykVEiGWZLn2FGLmxYSFtKfzsB6lAnvedzqLEvPAGhoSdpGJy0D9kL4CTXIJP6MKzXyyydjIuWvOrsff4Uf_DsKlsAT3BgDgFBV-u0lJTUmikPg9W97WRkqYBP6f06GwHH2zrWO68Pm-Pa60xQsI1f0NRuXMkYw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
