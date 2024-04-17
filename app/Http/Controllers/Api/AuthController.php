@@ -32,11 +32,4 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
     }
-
-    public function logout()
-    {
-        $user = Auth::user();
-        $user->token()->revoke();
-        return ApiResponse::success(null, 'Logout success', 200);
-    }
 }

@@ -28,18 +28,10 @@ class LiftController extends Controller
             $lift = new Lift();
             $lift->name = $request->name;
             $lift->save();
-            return ApiResponse::success($lift, 'Lift created successfully', 200);
+            return ApiResponse::success($lift, 'Lift created successfully', 201);
         } catch (\Exception $e) {
             return ApiResponse::error($e->getMessage(), 500);
         }
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**

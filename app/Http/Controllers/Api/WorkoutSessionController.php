@@ -17,7 +17,6 @@ class WorkoutSessionController extends Controller
      */
     public function index(Request $request)
     {
-        // $total = WorkoutSession::countDatas($request);
         $workoutSessions = WorkoutSession::search($request);
         return ApiResponse::success(['total' => 1, 'workoutSessions' => $workoutSessions], '', 200);
     }
@@ -38,19 +37,11 @@ class WorkoutSessionController extends Controller
             $workoutSession->sets()->createMany($request->sets);
 
             DB::commit();
-            return ApiResponse::success($workoutSession, 'Workout session created successfully', 200);
+            return ApiResponse::success($workoutSession, 'Workout session created successfully', 201);
         } catch (\Exception $e) {
             DB::rollBack();
             return ApiResponse::error($e->getMessage(), 500);
         }
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
     }
 
     /**
