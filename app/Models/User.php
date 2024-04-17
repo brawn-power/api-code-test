@@ -53,4 +53,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(WorkoutSession::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\hasManyThrough
+     */
+    public function sets()
+    {
+        return $this->hasManyThrough(Set::class, WorkoutSession::class, 'user_id', 'workout_session_id');
+    }
 }
