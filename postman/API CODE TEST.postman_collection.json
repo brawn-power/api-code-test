@@ -22,7 +22,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"duongdinhcuongviajsc@gmail.com\",\r\n    \"password\": \"123123123\"\r\n}"
+							"raw": "{\r\n    \"email\": \"your-email@gmail.com\",\r\n    \"password\": \"123123123\"\r\n}"
 						},
 						"url": {
 							"raw": "{{URL_API}}/api/auth/login",
